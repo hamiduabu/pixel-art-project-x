@@ -1,0 +1,240 @@
+/* Body */
+
+body {
+  text-align: center;
+  text-transform: uppercase;
+  color: #333;
+  font-weight: bold;
+  font-family: "Neucha", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Headings */
+
+h1 {
+  font: bolder 50px "Codystar", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0.2em;
+}
+
+h2 {
+  margin: 1em 0 0.25em;
+}
+
+h2:first-of-type {
+  margin-top: 0.5em;
+}
+
+/* Table/Grid Layout*/
+
+table,
+tr,
+td {
+  border: 1px solid #aaa;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+tr {
+  height: 20px;
+}
+
+td {
+  width: 20px;
+}
+
+/* Input types */
+
+input[type="number"] {
+  width: 6em;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+input[type="number"]:focus {
+  background: #bec;
+}
+
+input[type="submit"] {
+  border: 2px solid #7e9;
+}
+
+input[type="submit"]:hover {
+  background: #7e9;
+}
+
+input[type="submit"]:active {
+  background: #0f0;
+}
+
+input[type="color"] {
+  width: 30px;
+  height: 20px;
+}
+
+.input-style {
+  border-radius: 5px;
+  background: #ffe;
+  font-weight: inherit;
+  font-family: inherit;
+  height: 25px;
+  text-transform: uppercase;
+  color: #222;
+}
+
+.input-style:focus {
+  outline: 1px dotted #999;
+}
+
+/* Buttons and Icons */
+
+.btn {
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.btn-clear {
+  border: 2px solid #db4;
+}
+
+.btn-reset {
+  border: 2px solid #fa9;
+}
+
+.btn-hide {
+  border: 2px solid #48c;
+}
+
+.btn-fs {
+  display: none;
+  height: 30px;
+}
+
+/* Buttons behaviour on hover*/
+
+.btn:hover {
+  color: #fff;
+  transition: 300ms;
+}
+
+.btn-clear:hover {
+  background: #db4;
+}
+
+.btn-reset:hover {
+  background: #fa9;
+}
+
+.btn-hide:hover {
+  background: #48c;
+}
+
+/* Buttons behaviour on active*/
+
+.btn:active {
+  color: #fff;
+  transform: translateY(2px);
+}
+
+.btn-clear:active {
+  background: #fd0;
+}
+
+.btn-reset:active {
+  background: #d55;
+}
+
+.btn-hide:active {
+  background: #16a;
+}
+
+/* Icons */
+
+.material-icons {
+  border-bottom: 1px dotted #000;
+}
+
+/* Icon behaviour on hover */
+
+.material-icons:hover .help-color {
+  cursor: help;
+  fill: #333;
+  transition: 300ms;
+}
+
+.help {
+  position: relative;
+  display: inline-block;
+}
+
+.help-text {
+  display: inline-block;
+  visibility: hidden;
+  width: 350px;
+  background: #ccc;
+  color: #fff;
+  border-radius: 6px;
+  border: 1px dotted #000;
+  position: absolute;
+  z-index: 1;
+  font: normal 16px "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-transform: capitalize;
+  text-align: left;
+}
+
+.help:hover .help-text {
+  visibility: visible;
+}
+
+/* Logo */
+
+.one,
+.two,
+.three,
+.four {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #555;
+  border-radius: 3px;
+}
+
+.one {
+  background: #48e;
+  margin-right: 1px;
+}
+
+.two {
+  background: #3a5;
+  margin-left: 1px;
+}
+
+.three {
+  background: #fb0;
+  margin-right: 1px;
+}
+
+.four {
+  background: #e43;
+  margin-left: 1px;
+}
+
+.one:hover,
+.three:hover {
+  opacity: 0.25;
+  transition: 500ms;
+  transform: rotateX(180deg);
+}
+
+.two:hover,
+.four:hover {
+  opacity: 0.25;
+  transition: 500ms;
+  transform: rotateY(180deg);
+}
+
+.inline {
+  display: inline-block;
+}

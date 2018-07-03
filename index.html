@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Pixel Art Maker</title>
+  <link href="https://fonts.googleapis.com/css?family=Codystar%7CNeucha" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="icon" type="image/png" href="favicon/favicon-16x16.png" sizes="16x16">
+  <script src="lib/jquery.min.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+  <script src="js/main.js"></script>
+</head>
+
+<body>
+
+  <!-- START: hidden on full-screen(fs) mode -->
+  <div id="top">
+    <!-- START: grid logo -->
+    <div class="inline">
+      <div>
+        <span class="one"></span>
+        <span class="two"></span>
+      </div>
+      <div>
+        <span class="three"></span>
+        <span class="four"></span>
+      </div>
+    </div>
+    <!-- END: grid logo -->
+
+    <h1 class="inline">lab: pixel art maker</h1>
+    <h2>choose grid size</h2>
+
+    <form id="size-picker">
+      <label for="input-height">grid height:</label>
+      <input type="number" id="input-height" name="height" min="1" value="1" class="input-style">
+      <label for="input-width">grid width:</label>
+      <input type="number" id="input-width" name="width" min="1" value="1" class="input-style">
+      <input type="submit" id="create" value="create grid" class="input-style btn">
+    </form>
+
+    <h2>pick a color</h2>
+    <!-- TODO: add polyfills for cross browser compatibility -->
+    <label for="bg-color-picker">select background color</label>
+    <input type="color" id="bg-color-picker" value="#f4a460" class="input-style">
+    <!-- TODO: add polyfills for cross browser compatibility -->
+    <label for="color-picker">select grid color</label>
+    <input type="color" id="color-picker" value="#2e8b57" class="input-style">
+
+    <h2>design canvas</h2>
+  </div>
+  <!-- END: hidden on full-screen(fs) mode: end -->
+
+  <button id="clear" class="input-style btn btn-clear">clear grid</button>
+  <button id="reset" class="input-style btn btn-reset">delete grid</button>
+  <button id="hide" class="input-style btn btn-hide">full screen</button>
+
+  <!-- START: To be displayed only on full-screen(fs) view-->
+  <!-- TODO: add polyfills for cross browser compatibility -->
+  <label for="fs-bgcolor" class="btn-fs">bg color</label>
+  <input type="color" id="fs-bgcolor" value="#f4a460" class="input-style btn-fs">
+  <!-- TODO: add polyfills for cross browser compatibility -->
+  <label for="fs-gridcolor" class="btn-fs">grid color</label>
+  <input type="color" id="fs-gridcolor" value="#2e8b57" class="input-style btn-fs">
+  <!-- END: displayed only on full-screen(fs) mode -->
+
+
+  <!-- basic help information -->
+  <div class="help">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" class="material-icons">
+      <path d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"
+        fill="#888" class="help-color" />
+    </svg>
+    <div class="help-text">
+      <ol>
+        <li>click on a cell/grid to add selected grid color</li>
+        <li>click the same cell/grid again to remove previously added color</li>
+      </ol>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- grid layout -->
+  <table id="pixel-canvas">
+  </table>
+
+</body>
+
+</html>
